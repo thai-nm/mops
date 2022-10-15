@@ -1,3 +1,3 @@
-module github.com/backup
+module github.com/thainmuet/backup
 
 go 1.19
