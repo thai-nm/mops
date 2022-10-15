@@ -8,7 +8,7 @@ A simple CLI tool to backup a configuration file.
   
   E.g: `nginx.conf` -> `nginx.conf.20221016.backup`
 
-- Store multiple versions of the backup files into `backup_versions.json` 
+- Store multiple versions of the backup files into `backup_versions.json`. This file will be used for the file restore feature, __available soon__!
 
 ## Usage
 
