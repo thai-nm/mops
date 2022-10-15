@@ -1,5 +1,3 @@
 build:
-	go build main.go 
-
-run:
-	./main
+	go build ./backup-package/backup.go
+	go build ./restore-package/restore.go 
