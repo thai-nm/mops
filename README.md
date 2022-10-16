@@ -2,6 +2,8 @@
 
 A simple CLI tool to backup a configuration file.
 
+![Demo MOPS](./mops.gif)
+
 ## Features
 
 - Backup a file: `A.foo` -> `A.foo.YYYYMMDD.backup`
