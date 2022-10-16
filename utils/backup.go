@@ -2,20 +2,10 @@ package utils
 
 import (
 	"encoding/json"
-	"fmt"
-	"io/ioutil"
-	"log"
 	"os"
-	"time"
 )
 
 const FilePermission = 0600
-
-func checkIfFatal(err error) {
-	if err != nil {
-		log.Fatal(err)
-	}
-}
 
 func isNotContained(versions []string, oldVersion string) bool {
 	for _, version := range versions {
@@ -26,16 +16,11 @@ func isNotContained(versions []string, oldVersion string) bool {
 	return true
 }
 
-func getCurrentDate() string {
-	var date string = fmt.Sprintf("%v%v%v", time.Now().Year(), int(time.Now().Month()), time.Now().Day())
-	return date
-}
-
 func Backup(fileName string, BackupVersionFile string) {
 	backupFileName := fileName + "." + getCurrentDate() + ".backup"
 
 	// Backup file
-	fileData, err := ioutil.ReadFile(fileName)
+	fileData, err := os.ReadFile(fileName)
 	checkIfFatal(err)
 
 	err = os.WriteFile(backupFileName, fileData, FilePermission)
